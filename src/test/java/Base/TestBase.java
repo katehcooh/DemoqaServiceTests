@@ -1,6 +1,13 @@
 package Base;
 
 import Models.DriverType;
+import Pages.FrameAndWindows.FramesPage;
+import Pages.Interaction.*;
+import Pages.MainPages.*;
+import Pages.Registration.RegistrationPage;
+import Pages.SideMenuPage;
+import Pages.TopMenuPage;
+import Pages.Widget.*;
 import Providers.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
