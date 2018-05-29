@@ -34,6 +34,13 @@ public class TopMenuPage extends WebElementManipulator {
     @FindBy (xpath = "//a[@title='Contact']")
     private WebElement contactButton;
 
+    @FindBy (linkText = "Registration")
+    private WebElement registrationButton;
+
+    public void openRegistration(){
+        registrationButton.click();
+    }
+
     public TopMenuPage(WebDriver driver) {
         super(driver);
     }

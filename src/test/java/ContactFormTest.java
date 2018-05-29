@@ -1,6 +1,7 @@
 import Base.TestBase;
 import Models.TopMenu;
 import Pages.MainPages.ContactPage;
+import Pages.SideMenuPage;
 import Pages.TopMenuPage;
 import Pages.Widget.MenuPage;
 import Utilities.WebElementManipulator;

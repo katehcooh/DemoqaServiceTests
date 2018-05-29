@@ -2,6 +2,7 @@ package Pages;
 
 import Models.SideMenu;
 import Utilities.WebElementManipulator;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -97,6 +98,9 @@ public class SideMenuPage extends WebElementManipulator {
                 break;
             case FRAMES:
                 framesButton.click();
+                break;
+            default:
+                registrationButton.click();
                 break;
         }
     }
