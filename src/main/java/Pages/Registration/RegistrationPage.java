@@ -26,21 +26,17 @@ public class RegistrationPage extends WebElementManipulator {
     @FindBys(@FindBy(xpath = "//input[@type='checkbox']"))
     private List<WebElement> hobby;
 
-    /*@FindBy(xpath = "//select[@id='dropdown_7']")
+    @FindBy(id = "dropdown_7")
     private WebElement country;
-    Select selectCountry = new Select(country);
 
     @FindBy(id = "mm_date_8")
     private WebElement month;
-    Select selectMonth = new Select(month);
 
     @FindBy(id = "dd_date_8")
     private WebElement day;
-    Select selectDay = new Select(day);
 
     @FindBy(id = "yy_date_8")
     private WebElement year;
-    Select selectYear = new Select(year);*/
 
     @FindBy(id = "phone_9")
     private WebElement phone;
@@ -97,17 +93,17 @@ public class RegistrationPage extends WebElementManipulator {
         return this;
     }
 
-    /*public RegistrationPage setCountry(String country) {
-        selectCountry.selectByValue(country);
+    public RegistrationPage setCountry(String country) {
+        getSelectElement(this.country).selectByValue(country);
         return this;
     }
 
     public RegistrationPage setDate(String month, String day, String year) {
-        selectMonth.selectByValue(month);
-        selectDay.selectByValue(day);
-        selectYear.selectByValue(year);
+        getSelectElement(this.month).selectByValue(month);
+        getSelectElement(this.day).selectByValue(day);
+        getSelectElement(this.year).selectByValue(year);
         return this;
-    }*/
+    }
 
     public RegistrationPage setPhone(String number) {
         phone.sendKeys(number);

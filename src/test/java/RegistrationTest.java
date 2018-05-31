@@ -24,6 +24,8 @@ public class RegistrationTest extends TestBase {
                 .setMaritalStatus()
                 .setHobby(0)
                 .setHobby(1)
+                .setCountry("Poland")
+                .setDate("1", "25", "1991")
                 .setPhone("1234567890")
                 .setUsername("Kate")
                 .setEmail("kate", "@gmail.com")
