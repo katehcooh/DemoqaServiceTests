@@ -77,4 +77,8 @@ public class SelectablePage extends WebElementManipulator {
         return list.get(itemNumber-1).getText();
     }
 
+    public String getItemBgColor(List<WebElement> list, int itemNumber) {
+        return list.get(itemNumber-1).getCssValue("background-color");
+    }
+
 }
