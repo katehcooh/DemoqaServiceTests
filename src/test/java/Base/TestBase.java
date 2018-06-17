@@ -1,17 +1,11 @@
 package Base;
-
 import Models.DriverType;
-import Pages.FrameAndWindows.FramesPage;
-import Pages.Interaction.*;
-import Pages.MainPages.*;
-import Pages.Registration.RegistrationPage;
-import Pages.SideMenuPage;
-import Pages.TopMenuPage;
-import Pages.Widget.*;
 import Providers.DriverFactory;
+import Utilities.ExcelReader;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 
 import java.util.concurrent.TimeUnit;
 
@@ -29,5 +23,11 @@ public class TestBase {
     @AfterMethod
     public void tearDown() {
         driver.quit();
+    }
+
+    @DataProvider
+    public Object[][] Contact() throws Exception {
+        Object[][] contactData = ExcelReader.getTableArray(System.getProperty("user.dir")+"/src/main/resources/testdata/contactData.xlsx","Arkusz1", 3);
+        return contactData;
     }
 }
